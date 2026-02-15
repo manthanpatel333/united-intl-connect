@@ -1,15 +1,13 @@
-import { Globe, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-deep/90 backdrop-blur-md border-b border-navy-light/30">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <div className="flex items-center gap-3">
-          <Globe className="h-8 w-8 text-gold" />
-          <span className="text-xl font-display font-bold text-primary-foreground tracking-wide">
-            United Intl
-          </span>
+          <img src={logo} alt="United Intl" className="h-10 w-auto" />
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/80">
           <a href="#divisions" className="hover:text-gold transition-colors">Divisions</a>

@@ -1,4 +1,4 @@
-import { Globe } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -6,10 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <Globe className="h-6 w-6 text-gold" />
-            <span className="font-display font-bold text-primary-foreground text-lg">
-              United Intl
-            </span>
+            <img src={logo} alt="United Intl" className="h-8 w-auto" />
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-primary-foreground/60">
             <a href="#divisions" className="hover:text-gold transition-colors">
