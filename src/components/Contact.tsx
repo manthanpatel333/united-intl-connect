@@ -17,7 +17,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate submission
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -27,9 +26,9 @@ const Contact = () => {
 
   if (submitted) {
     return (
-      <section id="contact" className="py-24 bg-navy-gradient">
+      <section id="contact" className="py-24 bg-brand-gradient">
         <div className="container mx-auto px-6 text-center">
-          <CheckCircle className="h-16 w-16 text-gold mx-auto mb-6" />
+          <CheckCircle className="h-16 w-16 text-brand-teal mx-auto mb-6" />
           <h2 className="text-3xl font-display font-bold text-primary-foreground mb-4">
             Thank You!
           </h2>
@@ -42,11 +41,11 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-24 bg-navy-gradient">
+    <section id="contact" className="py-24 bg-brand-gradient">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-3">
+            <p className="text-brand-teal font-medium tracking-[0.2em] uppercase text-sm mb-3">
               Get in Touch
             </p>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-primary-foreground">
@@ -63,7 +62,7 @@ const Contact = () => {
                   type="text"
                   required
                   maxLength={100}
-                  className="w-full bg-navy-light/50 border border-navy-light text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full bg-brand-mid/50 border border-brand-mid text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-brand-teal/50"
                   placeholder="Your name"
                 />
               </div>
@@ -75,7 +74,7 @@ const Contact = () => {
                   type="email"
                   required
                   maxLength={255}
-                  className="w-full bg-navy-light/50 border border-navy-light text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full bg-brand-mid/50 border border-brand-mid text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-brand-teal/50"
                   placeholder="you@company.com"
                 />
               </div>
@@ -87,7 +86,7 @@ const Contact = () => {
               <input
                 type="text"
                 maxLength={100}
-                className="w-full bg-navy-light/50 border border-navy-light text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                className="w-full bg-brand-mid/50 border border-brand-mid text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-brand-teal/50"
                 placeholder="Company name"
               />
             </div>
@@ -95,7 +94,7 @@ const Contact = () => {
               <label className="block text-primary-foreground/70 text-sm font-medium mb-2">
                 Division of Interest
               </label>
-              <select className="w-full bg-navy-light/50 border border-navy-light text-primary-foreground rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50">
+              <select className="w-full bg-brand-mid/50 border border-brand-mid text-primary-foreground rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal/50">
                 {divisions.map((d) => (
                   <option key={d} value={d}>
                     {d}
@@ -111,14 +110,14 @@ const Contact = () => {
                 required
                 maxLength={1000}
                 rows={4}
-                className="w-full bg-navy-light/50 border border-navy-light text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-gold/50 resize-none"
+                className="w-full bg-brand-mid/50 border border-brand-mid text-primary-foreground rounded-md px-4 py-3 text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 resize-none"
                 placeholder="How can we help?"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gold-shimmer text-accent-foreground py-3.5 rounded-md font-semibold text-base flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50"
+              className="w-full bg-brand-shimmer text-primary-foreground py-3.5 rounded-md font-semibold text-base flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               {loading ? "Sending..." : "Send Inquiry"}
               <Send className="h-4 w-4" />
