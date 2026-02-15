@@ -40,27 +40,27 @@ const Divisions = () => {
     <section id="divisions" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-3">
+          <p className="text-brand-teal font-medium tracking-[0.2em] uppercase text-sm mb-3">
             Our Business Divisions
           </p>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
             Strategic Industries,{" "}
-            <span className="text-gradient-gold">Unified Vision</span>
+            <span className="text-gradient-brand">Unified Vision</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {divisions.map((div, i) => (
             <div
               key={div.title}
-              className="group relative bg-card rounded-lg border border-border p-8 hover:shadow-xl hover:border-gold/40 transition-all duration-300"
+              className="group relative bg-card rounded-lg border border-border p-8 hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-md bg-navy-deep text-gold shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 rounded-md bg-brand-deep text-brand-teal shrink-0">
                   <div.icon className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-display font-semibold text-card-foreground group-hover:text-gold transition-colors">
+                  <h3 className="text-xl font-display font-semibold text-card-foreground group-hover:text-brand-blue transition-colors">
                     {div.title}
                   </h3>
                 </div>
